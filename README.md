@@ -32,3 +32,12 @@ Part 2 – Output Costs (12 points)
 		-Good Coding Style (4 points) 
 
 	Does your code exemplify the good coding habits taught in class? Requirement Notes: No magic numbers (any numeric literal, such as 5 or 3.
+	
+Assume that:
+
+A new, non-hybrid car costs $15,000 and gets 25 mpg  -adjustable
+A new hybrid car costs $32,000 -adjustable
+You resell any car after 5 years for 75% its original value -adjustable
+You drive 10,000 miles in a year -adjustable
+Gas costs $2.50 -adjustable
+What gas mileage would a new hybrid need to have in order for the total costs over 5 years to be equal to the total costs for a non-hybrid car? Experiment with different values using your program to find the correct answer.  Then write your answer in a comment at the top of your code.  Please do not output your answer in your program... this may confuse the auto-grader.
