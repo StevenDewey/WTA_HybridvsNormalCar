@@ -1,5 +1,6 @@
 # WTA_HybridvsNormalCar
 Part 1 – User Input (4 points) 
+
 	Prompt the user for the following input:  
 		-The estimated miles driven per year 
 		-The estimated price of a gallon of gas during the 5 years of ownership 
@@ -14,6 +15,7 @@ Part 1 – User Input (4 points)
 	Assume the user will enter one of these two strings Make sure that you prompt in this same order. If you do not, you will be marked off.  Verify that all numerical inputs are positive. You will need to check each number individually and reprompt immediately in the event of bad numeric input (including 0). Output a message that only positive numbers are valid and reprompt one more time. You may assume that the second value will be a positive number.   
 
 Part 2 – Output Costs (12 points) 
+
 	For both cars, your program should output the following:  
 		-A label indicating whether the car is Hybrid or Non-Hybrid 
 		-The total gallons of fuel consumed over 5 years 
