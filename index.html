@@ -18,23 +18,46 @@
 		<div class="col-xs-6">
 			<h1>Hybrid</h1>
 			<hr>
-			<div class="initialCost"></div>
-			<div class="efficiency"></div>
+			<div class="initialCost">
+				<span>Initial Cost: </span>
+				<input type="text" ng-value="hybrid.cost">
+			</div>
+			<div class="efficiency">
+				<span>Efficency: </span>
+				<input type="text" ng-value="hybrid.efficency">
+			</div>
 		</div>
 		<div class="col-xs-6">
 			<h1>Normal</h1>
 			<hr>
-			<div class="initialCost"></div>
-			<div class="efficiency"></div>
+			<div class="initialCost">
+				<span>Initial Cost: </span>
+				<input type="text" ng-value="normal.cost">
+			</div>
+			<div class="efficiency">
+				<span>Efficency: </span>
+				<input type="text" ng-value="normal.efficency">
+			</div>
 		</div>
 	</div>
+	<br>
 	<div class="container common">
 		<div class="col-xs-12">
-			<div class="milesDriven"></div>
-			<div class="gasPrice"></div>
-			<div class="resellValue"></div>
+			<div class="milesDriven">
+				<span>Miles Driven: </span>
+				<input type="text" ng-model="milesDriven">
+			</div>
+			<div class="gasPrice">
+				<span>Average price of gas: </span>
+				<input type="text" ng-model="gasPrice">
+			</div>
+			<div class="resellValue">
+				<span>Resell Value: </span>
+				<input type="text" ng-model="resellValue">
+			</div>
 		</div>
 	</div>
+	<br>
 	<div class="container">
 		<div class="col-xs-12">
 			<input type="radio" name="type" ng-model="type" value="hybrid">Hybrid
