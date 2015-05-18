@@ -3,67 +3,73 @@
 <head>
 	<title>Hybrid vs Normal Car</title>
 	<link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
-	<link rel="stylesheet" href="style.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
+	<!-- Less files -->
+	<link rel="stylesheet/less" type="text/css" href="less/main.less">
+
+	<script src="script/less/less.min.js"></script>
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container unique">
-		<div class="col-xs-6">
-			<h1>Hybrid</h1>
-			<hr>
-			<div class="initialCost">
-				<span>Initial Cost: </span>
-				<input type="text" ng-value="hybrid.cost">
+	<div id="hybridVsNormal">
+		<div class="container unique">
+			<div class="col-xs-6">
+				<h1>Hybrids</h1>
+				<hr>
+				<div class="initialCost">
+					<span>Initial Cost: </span>
+					<input type="text" ng-value="hybrid.cost">
+				</div>
+				<div class="efficiency">
+					<span>Efficency: </span>
+					<input type="text" ng-value="hybrid.efficency">
+				</div>
 			</div>
-			<div class="efficiency">
-				<span>Efficency: </span>
-				<input type="text" ng-value="hybrid.efficency">
-			</div>
-		</div>
-		<div class="col-xs-6">
-			<h1>Normal</h1>
-			<hr>
-			<div class="initialCost">
-				<span>Initial Cost: </span>
-				<input type="text" ng-value="normal.cost">
-			</div>
-			<div class="efficiency">
-				<span>Efficency: </span>
-				<input type="text" ng-value="normal.efficency">
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="container common">
-		<div class="col-xs-12">
-			<div class="milesDriven">
-				<span>Miles Driven: </span>
-				<input type="text" ng-model="milesDriven">
-			</div>
-			<div class="gasPrice">
-				<span>Average price of gas: </span>
-				<input type="text" ng-model="gasPrice">
-			</div>
-			<div class="resellValue">
-				<span>Resell Value: </span>
-				<input type="text" ng-model="resellValue">
+			<div class="col-xs-6">
+				<h1>Normal</h1>
+				<hr>
+				<div class="initialCost">
+					<span>Initial Cost: </span>
+					<input type="text" ng-value="normal.cost">
+				</div>
+				<div class="efficiency">
+					<span>Efficency: </span>
+					<input type="text" ng-value="normal.efficency">
+				</div>
 			</div>
 		</div>
-	</div>
-	<br>
-	<div class="container">
-		<div class="col-xs-12">
-			<input type="radio" name="type" ng-model="type" value="hybrid">Hybrid
-			<input type="radio" name="type" ng-model="type" value="normal">Normal
+		<br>
+		<div class="container common">
+			<div class="col-xs-12">
+				<div class="milesDriven">
+					<span>Miles Driven: </span>
+					<input type="text" ng-model="milesDriven">
+				</div>
+				<div class="gasPrice">
+					<span>Average price of gas: </span>
+					<input type="text" ng-model="gasPrice">
+				</div>
+				<div class="resellValue">
+					<span>Resell Value: </span>
+					<input type="text" ng-model="resellValue">
+				</div>
+			</div>
 		</div>
-		<button class="btn btn-primary">Calculate</button>
+		<br>
+		<div class="container">
+			<div class="col-xs-12">
+				<input type="radio" name="type" ng-model="type" value="hybrid">Hybrid
+				<input type="radio" name="type" ng-model="type" value="normal">Normal
+			</div>
+			<button class="btn btn-primary">Calculate</button>
+		</div>
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
