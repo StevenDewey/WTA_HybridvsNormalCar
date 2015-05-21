@@ -25,11 +25,11 @@
 				<hr>
 				<div class="initialCost">
 					<span>Initial Cost: </span>
-					<input class="pull-right" type="text" ng-value="hybrid.cost">
+					<input class="pull-right" type="number" ng-model="hybrid.cost">
 				</div>
 				<div class="efficiency">
 					<span>Efficency (mpg): </span>
-					<input class="pull-right" type="text" ng-value="hybrid.efficency">
+					<input class="pull-right" type="number" ng-model="hybrid.efficiency">
 				</div>
 			</div>
 			<div class="col-xs-6">
@@ -37,11 +37,11 @@
 				<hr>
 				<div class="initialCost">
 					<span>Initial Cost: </span>
-					<input class="pull-right" type="text" ng-value="normal.cost">
+					<input class="pull-right" type="number" ng-model="normal.cost">
 				</div>
 				<div class="efficiency">
 					<span>Efficency (mpg): </span>
-					<input class="pull-right" type="text" ng-value="normal.efficency">
+					<input class="pull-right" type="number" ng-model="normal.efficiency">
 				</div>
 			</div>
 		</div>
@@ -51,11 +51,11 @@
 			<div class="col-xs-12">
 				<div class="milesDriven">
 					<span>Miles Driven: </span>
-					<input class="pull-right" type="text" ng-model="milesDriven">
+					<input class="pull-right" type="number" ng-model="milesDriven">
 				</div>
 				<div class="gasPrice">
 					<span>Average price of gas: </span>
-					<input class="pull-right" type="text" ng-model="gasPrice">
+					<input class="pull-right" type="number" ng-model="gasPrice">
 				</div>
 				<div class="resellValue">
 					<span>Resell Value: </span>
@@ -74,6 +74,9 @@
 				<input type="radio" name="type" ng-model="type" value="cost">Total Cost
 			</div>
 			<button class="btn btn-primary" ng-click="calc(type)">Calculate</button>
+		</div>
+		<div>
+			<h1>You should get a <span ng-if="hybrid.show">hybrid </span><span ng-show="normal.show">normal </span>car.</h1>
 		</div>
 	</div>
 </body>

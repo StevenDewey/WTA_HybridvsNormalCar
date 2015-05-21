@@ -3,7 +3,7 @@
 angular.module('HybridApp',[]).directive('hybridVsNormal',[function(){
 	return {
 		restrict:'A',
-		link:function($scope){
+		controller:function($scope){
 
 			function setup(){
 				$scope.hybrid = {};
@@ -13,17 +13,40 @@ angular.module('HybridApp',[]).directive('hybridVsNormal',[function(){
 				$scope.resellValue = 75;
 			}
 
-			$scope.calc = function(type) {
-				switch(type){
-					case 'gas':
-						alert('You select type ' + type);
-						break;
+			function determineWhatToShow(type){
+				var show;
+				switch (type) {
 					case 'cost':
-						alert('You select type ' + type);
+						show=$scope.hybrid.total < $scope.normal.total;
 						break;
+					case 'gas':
+						show=$scope.hybrid.efficiency > $scope.normal.efficiency;
 					default:
-						alert('please select type');
 				}
+				$scope.hybrid.show=show;
+				$scope.normal.show=!show;
+			}
+
+			function calcHybrid(){
+				var cost = $scope.hybrid.cost;
+				var eff = $scope.hybrid.efficiency;
+				var resell = cost * $scope.resellValue / 100;
+				var gas = $scope.milesDriven/eff*$scope.gasPrice;
+				$scope.hybrid.total = cost+gas-resell;
+			}
+
+			function calcNormal(){
+				var cost = $scope.normal.cost;
+				var eff = $scope.normal.efficiency;
+				var resell = cost * $scope.resellValue / 100;
+				var gas = $scope.milesDriven/eff*$scope.gasPrice;
+				$scope.normal.total = cost+gas-resell;
+			}
+
+			$scope.calc = function(type) {
+				calcHybrid();
+				calcNormal();
+				determineWhatToShow(type);
 			};
 
 			setup();
